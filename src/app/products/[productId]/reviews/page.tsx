@@ -1,15 +1,12 @@
-export default async function ReviewsListing({
-  params,
-}: {
-  params: Promise<{ productId: string }>;
-}) {
+export default async function ProductReviews({ params, }: { params: Promise<{ productId: string }> }) {
   const { productId } = await params;
   return (
     <>
-      <h1>Reviews</h1>
-      <p>Product 1</p>
-      <p>Product 2</p>
-      <p>Product 3</p>
+      <h1>Product {productId}</h1>
+      <p>Reviews1</p>
+      <p>Reviews2</p>
+      <p>Reviews3</p>
+      <p>Reviews4</p>
     </>
   );
 }
