@@ -25,9 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header style={{ backgroundColor: "cyan", padding: "1rem" }}>
+          <h1>My App</h1>
+        </header>
+        <div style={{ backgroundColor: "lightgreen", padding: "5rem" }}>{children}</div>
+        <footer style={{ backgroundColor: "lightgray", padding: "1rem" }}>
+          <p>© 2024 My App</p>
+        </footer>
       </body>
     </html>
   );
