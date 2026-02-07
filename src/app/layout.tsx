@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
-// import "./globals.css";
 import "./globals.css";
+import { ErrorWrapper } from "./error-wrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,18 +30,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header style={{ backgroundColor: "cyan", padding: "1rem" }}>
-          <h1>My App</h1>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <header style={{ backgroundColor: "lightgray", padding: "1rem" }}>
+          <div>My App</div>
           <Link href="/">
-            <h1>Home</h1>
+            <div>Home</div>
           </Link>
         </header>
-        <div style={{ backgroundColor: "lightgreen", padding: "5rem" }}>
+        <div style={{ backgroundColor: "", padding: "2rem" }}>
+          {/* <ErrorWrapper>{children}</ErrorWrapper> */}
           {children}
         </div>
         <footer style={{ backgroundColor: "lightgray", padding: "1rem" }}>
-          <p>© 2024 My App</p>
+          <p>© 2026 My App</p>
         </footer>
       </body>
     </html>
